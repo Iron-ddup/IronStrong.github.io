@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Title]]></title>
+    <url>%2F2018%2F12%2F06%2Ftitle.html</url>
+    <content type="text"></content>
+      <categories>
+        <category>category</category>
+      </categories>
+      <tags>
+        <tag>tag1</tag>
+        <tag>tag2</tag>
+        <tag>...</tag>
+      </tags>
+  </entry>
+</search>
