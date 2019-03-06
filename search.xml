@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[solidity01]]></title>
+    <url>%2F2019%2F03%2F06%2Fsolidity01.html</url>
+    <content type="text"><![CDATA[solidity学习讲解 基础讲解 1 2 2 3]]></content>
+      <categories>
+        <category>solidity学习</category>
+      </categories>
+      <tags>
+        <tag>solidity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Title]]></title>
     <url>%2F2019%2F03%2F06%2Ftitle.html</url>
     <content type="text"><![CDATA[搭建博客安装这个快速搭建一个博客 1sudo npm install hexo-cli -g 1234hexo init blogcd blognpm installhexo server]]></content>
