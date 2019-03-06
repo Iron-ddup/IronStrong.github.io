@@ -12,6 +12,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[solidity02]]></title>
+    <url>%2F2019%2F03%2F06%2Fsolidity02.html</url>
+    <content type="text"><![CDATA[solidity学习2 我们要好好学习天天向上 你说呢 胖子 哈哈哈哈￥￥￥￥]]></content>
+      <categories>
+        <category>solidity学习</category>
+      </categories>
+      <tags>
+        <tag>solidity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Title]]></title>
     <url>%2F2019%2F03%2F06%2Ftitle.html</url>
     <content type="text"><![CDATA[搭建博客安装这个快速搭建一个博客 1sudo npm install hexo-cli -g 1234hexo init blogcd blognpm installhexo server]]></content>
