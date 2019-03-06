@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[java数据结构]]></title>
-    <url>%2F2018%2F12%2F07%2Fjava%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</url>
-    <content type="text"><![CDATA[java数据结构1.什么是数据结构​ 简单地说，数据结构是以某种特定的布局方式存储数据的容器。这种“布局方式”决定了数据结构对于某些操作是高效的，而对于其他操作则是低效的。首先我们需要理解各种数据结构，才能在处理实际问题时选取最合适的数据结构。 2.为什么我们需要数据结构​ 数据是计算机科学当中最关键的实体，而数据结构则可以将数据以某种组织形式存储，因此，数据结构的价值不言而喻。 ​ 无论你以何种方式解决何种问题，你都需要处理数据——无论是涉及员工薪水、股票价格、购物清单，还是只是简单的电话簿问题。 ​ 数据需要根据不同的场景，按照特定的格式进行存储。有很多数据结构能够满足以不同格式存储数据的需求。]]></content>
-      <tags>
-        <tag>about</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[Title]]></title>
-    <url>%2F2018%2F12%2F07%2Ftitle.html</url>
+    <url>%2F2019%2F03%2F06%2Ftitle.html</url>
     <content type="text"><![CDATA[搭建博客安装这个快速搭建一个博客 1sudo npm install hexo-cli -g 1234hexo init blogcd blognpm installhexo server]]></content>
       <categories>
         <category>category</category>
@@ -19,6 +11,14 @@
         <tag>tag1</tag>
         <tag>tag2</tag>
         <tag>...</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[java数据结构]]></title>
+    <url>%2F2018%2F12%2F07%2Fjava%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.html</url>
+    <content type="text"><![CDATA[java数据结构1.什么是数据结构​ 简单地说，数据结构是以某种特定的布局方式存储数据的容器。这种“布局方式”决定了数据结构对于某些操作是高效的，而对于其他操作则是低效的。首先我们需要理解各种数据结构，才能在处理实际问题时选取最合适的数据结构。 2.为什么我们需要数据结构​ 数据是计算机科学当中最关键的实体，而数据结构则可以将数据以某种组织形式存储，因此，数据结构的价值不言而喻。 ​ 无论你以何种方式解决何种问题，你都需要处理数据——无论是涉及员工薪水、股票价格、购物清单，还是只是简单的电话簿问题。 ​ 数据需要根据不同的场景，按照特定的格式进行存储。有很多数据结构能够满足以不同格式存储数据的需求。]]></content>
+      <tags>
+        <tag>about</tag>
       </tags>
   </entry>
 </search>
