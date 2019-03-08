@@ -760,7 +760,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  760
+                  1.1k
                 </span>
               
 
@@ -776,7 +776,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -820,7 +820,7 @@
 <li>callcode()：以内部函数调用的形式调用某个address的函数</li>
 <li>delegatecall()：以内部函数调用的形式调用某个address的函数，设置msg.sender和msg.value</li>
 </ul>
-<h2 id="字节数组"><a href="#字节数组" class="headerlink" title="字节数组"></a>字节数组</h2><p><strong>固定长度的数组</strong>是以bytes加上数字后缀的方式定义的，如bytes2表示两个字节长度的字节数组数字后缀长度从1到32，以步长1递增。bytes缺省为bytes1。定长数据类型有通用的length()方法，获取数据长度</p>
+<h2 id="字节数组"><a href="#字节数组" class="headerlink" title="字节数组"></a>字节数组</h2><p><strong>固定长度的字节数组</strong>是以bytes加上数字后缀的方式定义的，如bytes2表示两个字节长度的字节数组数字后缀长度从1到32，以步长1递增。bytes缺省为bytes1。定长数据类型有通用的length()方法，获取数据长度</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">byte a;//==bytes1</span><br><span class="line">bytes2 b;</span><br></pre></td></tr></table></figure>
 <p><strong>动态长度的字节数组</strong>：1.bytes:动态长度字节数组； 2，string:动态长度字符串。</p>
 <p>bytes是一种特殊的数组。bytes类似byte[],在外部函数作为参数时，会进行压缩打包以便节省空间，所以尽量使用bytes;</p>
@@ -828,6 +828,14 @@
 <p>string类似bytes,目前不提供长度和按索引的访问方式。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string name = &quot;sss&quot;;//string 存储是以UTF-8的形式，所以是双引号。</span><br></pre></td></tr></table></figure>
 <p>不能 name.length和name[0]</p>
+<h2 id="数组和多维数组"><a href="#数组和多维数组" class="headerlink" title="数组和多维数组"></a><strong>数组和多维数组</strong></h2><p>数组同样分为定长数组和动态数组。固定长度的数组在申明之后长度不可以改变，动态数组不需要指定长度且在后续使用的过程是可以动态添加数组。</p>
+<p>使用方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">uint[3] a;                                                   //静态数组</span><br><span class="line">uint[3] a = [1,2,3];                                         //静态数组初始化</span><br><span class="line">a[0] = 4;                                                    //修改数组元素</span><br><span class="line">var a_length = a.length;                                     //数组长度</span><br></pre></td></tr></table></figure>
+<p>动态数组的使用方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bytes32[] name ;                                             //动态数组默认长度为0</span><br><span class="line">bytes32[] name = new bytes32[](5);                           //初始化一个长度为5的动态数组</span><br><span class="line">uint length = names.push(&quot;IronStrong&quot;);                      //添加元素，返回新数组的长度</span><br><span class="line">names[0] = bytes32(&quot;xiaoqiang&quot;);                             //修改数组中的元素</span><br><span class="line">names.length;                                                //获取数组的长度</span><br><span class="line">names.length = 1;                             //设置数组的长度（只能用于storage中的动态数组）</span><br></pre></td></tr></table></figure>
+<p><strong>多维数组</strong></p>
+<p>在solidity中多维数组的行列位置和大多数的编程语言是相反的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">//静态的多维数组</span><br><span class="line">uint[3][5] a ;    //5行3列</span><br><span class="line">a[0][0] = 1;</span><br><span class="line">//动态多维数组举例</span><br><span class="line">//拥有动态数组所有特性</span><br><span class="line">uint[][5] b;       //5行，列为动态</span><br><span class="line">y[0].push(uint(1));  //添加元素</span><br><span class="line">y[0].push(uint(2));</span><br><span class="line">y[0].length = 10;   //设置长度</span><br><span class="line"></span><br><span class="line">uint[3][] b ;     //列长为3，行可变</span><br><span class="line">z.push([1,2,3]);  //添加数组，返回行的长度</span><br><span class="line">z.length = 10;    //设置行长度</span><br></pre></td></tr></table></figure>
 <p><strong>具体使用介绍：</strong></p>
 <p>声明在函数内的memory类型定长数组，需要使用new<a href=""></a>来申请memory空间</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">pragma solidity ^0.4.16;</span><br><span class="line"></span><br><span class="line">contract C &#123;</span><br><span class="line">    function f(uint len) public pure &#123;</span><br><span class="line">        uint[] memory a = new uint[](7);</span><br><span class="line">        bytes memory b = new bytes(len);</span><br><span class="line">        a[6] = 8;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1358,7 +1366,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.6k</span>
+    <span title="Site words total count">2k</span>
   
 </div>
 
