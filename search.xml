@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[solidity01]]></title>
     <url>%2F2019%2F03%2F06%2Fsolidity01.html</url>
-    <content type="text"><![CDATA[solidity学习讲解 基础讲解 1 2 2 3]]></content>
+    <content type="text"><![CDATA[solidity学习讲解(1)solidity是什么？ Solidity是运行在EVM上，面向合约的高级编程语言，它的语法受C++、Python和JavaScript的影响 Solidity使用静态类型，支持继承、库和用户自定义类型等特性 智能合约是在区块链上达成协议的一种方式，智能合约并没有超越传统合约的功能，但它能最小化达成协议所需的信任。 智能合约不仅是一个可以自动执行的程序，它自己就是一个区块链参与者。它对接收到的交易进行回应，它可以接收和储存价值，也可以向外发送信息和价值。 参考链接：http://solidity.readthedocs.io/en/v0.4.24/ solidity开发环境Remix编辑器 ​ Solidity的在线编辑器 ​ 支持语法高亮、代码补全和代码管理等功能 ​ 支持编译Solidity代码 ​ https://remix.ethereum.org/ 当然也可以用如下方式： EVM变量类型Solidity的变量，根据其声明位置、修饰符的不同，分三种类型 calldata：calldata保存在栈中，保存public函数的参数，该类数据无需手工声明，由solidity自动分配，由于EVM最多访问深度为16的栈元素，因此calldata最多支持16个变量 memory：memory变量位于EVM的memory区，存放函数的临时局部数据，函数执行完后即销毁，函数内临时变量和私有函数的参数均为memory变量 storage：storage变量保存在State存储中，声明在合约内、函数外的变量均为storage变量 变量寻址 calldata变量存储于栈中，EVM的运算指令直接从栈中取数计算 memory变量存储于内存，通过EVM的MLOAD、MSTORE指令操作 存储变量保存在State存储中 存储器变量在State中按Key-Value存储，存储规则如下： 变量Hash Key：按合约hash+变量序号计算hash 数组Hash Key：变量Hash Key对应的Value，存储数组大小，变量Hash Key+下标值的Hash Key对应的Value，存储元素值 Mapping Hash Key：变量Hash Key+Mapping Key Hash的Hash Key对应的Value，存储元素值 calldata变量存储于栈中，EVM的运算指令直接从栈中取数计算 memory变量存储于内存，通过EVM的MLOAD、MSTORE指令操作 存储变量保存在State存储中 存储器变量在State中按Key-Value存储，存储规则如下： 变量Hash Key：按合约hash+变量序号计算hash 数组Hash Key：变量Hash Key对应的Value，存储数组大小，变量Hash Key+下标值的Hash Key对应的Value，存储元素值 Mapping Hash Key：变量Hash Key+Mapping Key Hash的Hash Key对应的Value，存储元素值]]></content>
       <categories>
         <category>solidity学习</category>
       </categories>

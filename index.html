@@ -547,7 +547,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  13
+                  680
                 </span>
               
 
@@ -563,7 +563,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -586,12 +586,54 @@
       
         
           
-            <p>solidity学习讲解</p>
-<p>基础讲解</p>
-<p>1</p>
-<p>2</p>
-<p>2</p>
-<p>3</p>
+            <h1 id="solidity学习讲解-1"><a href="#solidity学习讲解-1" class="headerlink" title="solidity学习讲解(1)"></a>solidity学习讲解(1)</h1><h2 id="solidity是什么？"><a href="#solidity是什么？" class="headerlink" title="solidity是什么？"></a>solidity是什么？</h2><ol>
+<li><p>Solidity是运行在EVM上，面向合约的高级编程语言，它的语法受C++、Python和JavaScript的影响</p>
+</li>
+<li><p>Solidity使用静态类型，支持继承、库和用户自定义类型等特性</p>
+</li>
+<li><p>智能合约是在区块链上达成协议的一种方式，智能合约并没有超越传统合约的功能，但它能最小化达成协议所需的信任。</p>
+</li>
+<li><p>智能合约不仅是一个可以自动执行的程序，它自己就是一个区块链参与者。它对接收到的交易进行回应，它可以接收和储存价值，也可以向外发送信息和价值。</p>
+<p>参考链接：<strong><a href="http://solidity.readthedocs.io/en/v0.4.24/" target="_blank" rel="noopener">http://solidity.readthedocs.io/en/v0.4.24/</a></strong></p>
+</li>
+</ol>
+<h2 id="solidity开发环境"><a href="#solidity开发环境" class="headerlink" title="solidity开发环境"></a>solidity开发环境</h2><p>Remix编辑器</p>
+<ul>
+<li>​     Solidity的在线编辑器</li>
+<li>​     支持语法高亮、代码补全和代码管理等功能</li>
+<li>​     支持编译Solidity代码</li>
+<li>​      <a href="https://remix.ethereum.org/" target="_blank" rel="noopener">https://remix.ethereum.org/</a></li>
+</ul>
+<p><img src="/2019/03/06/C:/Users\think\AppData\Roaming\Typora\typora-user-images\1552012883737.png" alt="1552012883737"></p>
+<p>当然也可以用如下方式：</p>
+<p><img src="/2019/03/06/C:/Users\think\AppData\Roaming\Typora\typora-user-images\1552013056075.png" alt="1552013056075"></p>
+<h2 id="EVM变量类型"><a href="#EVM变量类型" class="headerlink" title="EVM变量类型"></a>EVM变量类型</h2><p>Solidity的变量，根据其声明位置、修饰符的不同，分三种类型</p>
+<ul>
+<li>calldata：calldata保存在栈中，保存public函数的参数，该类数据无需手工声明，由solidity自动分配，由于EVM最多访问深度为16的栈元素，因此calldata最多支持16个变量</li>
+<li>memory：memory变量位于EVM的memory区，存放函数的临时局部数据，函数执行完后即销毁，函数内临时变量和私有函数的参数均为memory变量</li>
+<li>storage：storage变量保存在State存储中，声明在合约内、函数外的变量均为storage变量</li>
+</ul>
+<h2 id="变量寻址"><a href="#变量寻址" class="headerlink" title="变量寻址"></a>变量寻址</h2><ul>
+<li>calldata变量存储于栈中，EVM的运算指令直接从栈中取数计算</li>
+<li>memory变量存储于内存，通过EVM的MLOAD、MSTORE指令操作</li>
+<li>存储变量保存在State存储中</li>
+<li>存储器变量在State中按Key-Value存储，存储规则如下：</li>
+</ul>
+<ol>
+<li>变量Hash Key：按合约hash+变量序号计算hash</li>
+<li>数组Hash Key：变量Hash Key对应的Value，存储数组大小，变量Hash Key+下标值的Hash Key对应的Value，存储元素值</li>
+<li>Mapping Hash Key：变量Hash Key+Mapping Key Hash的Hash Key对应的Value，存储元素值</li>
+</ol>
+<ul>
+<li><p>calldata变量存储于栈中，EVM的运算指令直接从栈中取数计算</p>
+</li>
+<li><p>memory变量存储于内存，通过EVM的MLOAD、MSTORE指令操作</p>
+</li>
+<li><p>存储变量保存在State存储中</p>
+</li>
+</ul>
+<p>  存储器变量在State中按Key-Value存储，存储规则如下：</p>
+<p>  变量Hash Key：按合约hash+变量序号计算hash<br>  数组Hash Key：变量Hash Key对应的Value，存储数组大小，变量Hash Key+下标值的Hash Key对应的Value，存储元素值<br>  Mapping Hash Key：变量Hash Key+Mapping Key Hash的Hash Key对应的Value，存储元素值</p>
 
           
         
@@ -1281,7 +1323,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">342</span>
+    <span title="Site words total count">1k</span>
   
 </div>
 
